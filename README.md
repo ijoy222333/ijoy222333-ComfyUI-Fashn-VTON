@@ -9,3 +9,4 @@
 https://huggingface.co/yzd-v/DWPose/blob/main/dw-ll_ucoco_384.onnx
 https://huggingface.co/yzd-v/DWPose/blob/main/yolox_l.onnx
 放到ComfyUI\models\fashn_vton\dwpose
+合作V：jzxlzhao998
