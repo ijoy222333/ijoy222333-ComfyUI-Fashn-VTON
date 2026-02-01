@@ -1,4 +1,4 @@
-# ijoy222333-ComfyUI-Fashn-VTON
+ComfyUI-Fashn-VTON
 
 模型model可以百度网盘下载
 链接: https://pan.baidu.com/s/1gyHvOiuhV3J_6ysNENtgPQ?pwd=2uj4 提取码: 2uj4 
