@@ -1,0 +1,460 @@
+{
+  "id": "b89710c3-4408-404a-92d9-37cc477c9843",
+  "revision": 0,
+  "last_node_id": 7,
+  "last_link_id": 9,
+  "nodes": [
+    {
+      "id": 4,
+      "type": "LoadImage",
+      "pos": [
+        25638.27667738988,
+        2717.7201696400666
+      ],
+      "size": [
+        270,
+        314
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image",
+          "name": "image",
+          "type": "COMBO",
+          "widget": {
+            "name": "image"
+          },
+          "link": null
+        },
+        {
+          "label": "upload",
+          "name": "upload",
+          "type": "IMAGEUPLOAD",
+          "widget": {
+            "name": "upload"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            7
+          ]
+        },
+        {
+          "label": "遮罩",
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.11.1",
+        "Node name for S&R": "LoadImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        }
+      },
+      "widgets_values": [
+        "微信图片_20260125141622_40_1671.png",
+        "image"
+      ]
+    },
+    {
+      "id": 5,
+      "type": "LoadImage",
+      "pos": [
+        25989.63200677966,
+        2734.86690094618
+      ],
+      "size": [
+        270,
+        314
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image",
+          "name": "image",
+          "type": "COMBO",
+          "widget": {
+            "name": "image"
+          },
+          "link": null
+        },
+        {
+          "label": "upload",
+          "name": "upload",
+          "type": "IMAGEUPLOAD",
+          "widget": {
+            "name": "upload"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            8
+          ]
+        },
+        {
+          "label": "遮罩",
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.11.1",
+        "Node name for S&R": "LoadImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        }
+      },
+      "widgets_values": [
+        "2a203dadcf2c1f5f3979dd8645e9833b0dc48bff87b3a963deefc936872109d3.jpg",
+        "image"
+      ]
+    },
+    {
+      "id": 6,
+      "type": "FashnVTON_Loader",
+      "pos": [
+        26330.29057400812,
+        2593.2763662120624
+      ],
+      "size": [
+        226.1451171875,
+        58
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "model_dir",
+          "name": "model_dir",
+          "type": "STRING",
+          "widget": {
+            "name": "model_dir"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "pipeline",
+          "name": "pipeline",
+          "type": "FASHN_PIPE",
+          "links": [
+            6
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FashnVTON_Loader",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        }
+      },
+      "widgets_values": [
+        "F:\\ComfyUI\\models\\fashn_vton"
+      ]
+    },
+    {
+      "id": 1,
+      "type": "PreviewImage",
+      "pos": [
+        26645.554799856498,
+        2559.4832600976097
+      ],
+      "size": [
+        492.1405599248683,
+        566.2107214571797
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 9
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.11.1",
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 7,
+      "type": "FashnVTON_Run",
+      "pos": [
+        26311.20757673004,
+        2718.4730862326164
+      ],
+      "size": [
+        333.6412109375,
+        338
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "pipeline",
+          "name": "pipeline",
+          "type": "FASHN_PIPE",
+          "link": 6
+        },
+        {
+          "label": "person_image",
+          "name": "person_image",
+          "type": "IMAGE",
+          "link": 7
+        },
+        {
+          "label": "garment_image",
+          "name": "garment_image",
+          "type": "IMAGE",
+          "link": 8
+        },
+        {
+          "label": "category",
+          "name": "category",
+          "type": "COMBO",
+          "widget": {
+            "name": "category"
+          },
+          "link": null
+        },
+        {
+          "label": "garment_type",
+          "name": "garment_type",
+          "type": "COMBO",
+          "widget": {
+            "name": "garment_type"
+          },
+          "link": null
+        },
+        {
+          "label": "num_timesteps",
+          "name": "num_timesteps",
+          "type": "INT",
+          "widget": {
+            "name": "num_timesteps"
+          },
+          "link": null
+        },
+        {
+          "label": "guidance_scale",
+          "name": "guidance_scale",
+          "type": "FLOAT",
+          "widget": {
+            "name": "guidance_scale"
+          },
+          "link": null
+        },
+        {
+          "label": "seed",
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": null
+        },
+        {
+          "label": "segmentation_free",
+          "name": "segmentation_free",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "segmentation_free"
+          },
+          "link": null
+        },
+        {
+          "label": "restore_original_size",
+          "name": "restore_original_size",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "restore_original_size"
+          },
+          "link": null
+        },
+        {
+          "label": "resize_method",
+          "name": "resize_method",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "resize_method"
+          },
+          "link": null
+        },
+        {
+          "label": "smart_erode",
+          "name": "smart_erode",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "smart_erode"
+          },
+          "link": null
+        },
+        {
+          "label": "texture_boost",
+          "name": "texture_boost",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "texture_boost"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            9
+          ]
+        }
+      ],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        },
+        "Node name for S&R": "FashnVTON_Run"
+      },
+      "widgets_values": [
+        "tops (上衣/外套)",
+        "model (模特身上的衣服)",
+        50,
+        2.5,
+        42,
+        "randomize",
+        false,
+        true,
+        "Bilinear (柔和/抗锯齿)",
+        0,
+        0
+      ]
+    }
+  ],
+  "links": [
+    [
+      6,
+      6,
+      0,
+      7,
+      0,
+      "FASHN_PIPE"
+    ],
+    [
+      7,
+      4,
+      0,
+      7,
+      1,
+      "IMAGE"
+    ],
+    [
+      8,
+      5,
+      0,
+      7,
+      2,
+      "IMAGE"
+    ],
+    [
+      9,
+      7,
+      0,
+      1,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "加载Load model",
+      "bounding": [
+        25616.459676603536,
+        2627.30759421736,
+        317.97618043669354,
+        459.4618328324909
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "加载服饰Load clothing",
+      "bounding": [
+        25961.165771115786,
+        2629.2451300018315,
+        318.6865552426789,
+        453.9598727459129
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "workflowRendererVersion": "LG",
+    "ue_links": [],
+    "ds": {
+      "scale": 0.9646149645000006,
+      "offset": [
+        -24883.761319251378,
+        -2292.380743541598
+      ]
+    },
+    "links_added_by_ue": [],
+    "frontendVersion": "1.37.11",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
